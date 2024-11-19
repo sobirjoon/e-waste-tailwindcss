@@ -1,0 +1,62 @@
+<div class="flex items-center justify-center min-h-[50vh]">
+    <div class="card w-full max-w-2xl bg-base-100 shadow-xl p-8 mt-16">
+        <label class="swap swap-flip text-8xl mb-4">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" />
+
+            <div class="swap-on flex flex-col items-center">
+                <div>😎</div> <!-- Happy Smiley -->
+                <p class="text-2xl font-bold text-green-700 mt-4">Awesome Work!</p>
+            </div>
+            <div class="swap-off flex flex-col items-center">🔁</div>
+        </label>
+
+        <!-- Steps -->
+        <ul class="steps steps-horizontal mt-4">
+            <li class="step step-primary">Step 1</li>
+            <li class="step step-primary">Step 2</li>
+            <li class="step step-primary">Step 3</li>
+            <li data-content="✓" class="step">Done</li>
+        </ul>
+
+        <!-- Section Heading -->
+        <h2 class="text-center text-2xl font-bold mb-8 mt-8">What do you want to do with your device?</h2>
+
+        <!-- Button Grid -->
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <!-- Button 1 -->
+            <a href="/log-request-dispose" class="btn btn-outline rounded-full">
+                Dispose
+            </a>
+            <!-- Button 2 -->
+            <a href="/log-request-donate" class="btn btn-outline rounded-full">
+                Donate
+            </a>
+            <!-- Button 3 -->
+            <a href="/log-request-resell" class="btn btn-outline rounded-full">
+                Resell
+            </a>
+            <!-- Button 4 -->
+            <a href="/log-request-exchange" class="btn btn-outline rounded-full">
+                Exchange
+            </a>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full mb-6">
+            <progress class="progress progress-primary w-full" value="70" max="100"></progress>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-center items-center space-x-4">
+            <!-- Back Button -->
+            <a href="/log-request-step-two" class="btn">
+                Back
+            </a>
+            <!-- Next Button -->
+<!--            <a href="/log-request-step-four" class="btn">-->
+<!--                Next-->
+<!--            </a>-->
+        </div>
+    </div>
+</div>

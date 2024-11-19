@@ -1,0 +1,63 @@
+<div class="flex items-center justify-center min-h-[50vh]">
+    <div class="card w-full max-w-2xl bg-base-100 shadow-xl p-8 mt-16">
+        <label class="swap swap-flip text-8xl mb-4">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" />
+
+            <div class="swap-on flex flex-col items-center">
+                <div>☺️</div> <!-- Happy Smiley -->
+                <p class="text-2xl font-bold text-green-700 mt-4">Good Job!</p>
+            </div>
+            <div class="swap-off flex flex-col items-center">📱</div>
+        </label>
+
+        <!-- Steps -->
+        <ul class="steps steps-horizontal mt-4">
+            <li class="step step-primary">Step 1</li>
+            <li class="step">Step 2</li>
+            <li class="step">Step 3</li>
+            <li data-content="✓" class="step">Done</li>
+        </ul>
+
+
+        <!-- Section Heading -->
+        <h2 class="text-center text-2xl font-bold mb-8 mt-4">Choose your device type</h2>
+
+        <!-- Button Grid -->
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <!-- Button 1 -->
+            <button class="btn btn-outline rounded-full">
+                Laptops, Desktops & Phones
+            </button>
+            <!-- Button 2 -->
+            <button class="btn btn-outline rounded-full">
+                Small Home Appliances
+            </button>
+            <!-- Button 3 -->
+            <button class="btn btn-outline rounded-full">
+                Mouses, Keyboards & Accessories
+            </button>
+            <!-- Button 4 -->
+            <button class="btn btn-outline rounded-full">
+                Large Home Appliances
+            </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full mb-6">
+            <progress class="progress progress-primary w-full" value="20" max="100"></progress>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-center items-center space-x-4">
+            <!-- Back Button -->
+            <a href="/" class="btn">
+                Back
+            </a>
+            <!-- Next Button -->
+            <a href="/log-request-step-two" class="btn">
+                Next
+            </a>
+        </div>
+    </div>
+</div>

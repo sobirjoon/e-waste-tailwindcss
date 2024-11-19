@@ -1,0 +1,60 @@
+<div class="flex gap-5 text- justify-center space-x-2 mt-16">
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="days" style="--value:15;"></span>
+      </span>
+        <p>days</p>
+    </div>
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="hours" style="--value:10;"></span>
+      </span>
+        <p>hours</p>
+    </div>
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="minutes" style="--value:24;"></span>
+      </span>
+        <p>min</p>
+    </div>
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="seconds" style="--value:59;"></span>
+      </span>
+        <p>sec</p>
+    </div>
+</div>
+
+<script>
+    // Set the countdown target date
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 3); // Add 15 days
+
+    // Update the countdown every second
+    const updateCountdown = () => {
+        const now = new Date();
+        const difference = targetDate - now;
+
+        // Calculate time components
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Update the DOM
+        document.getElementById("days").style.setProperty("--value", days);
+        document.getElementById("hours").style.setProperty("--value", hours);
+        document.getElementById("minutes").style.setProperty("--value", minutes);
+        document.getElementById("seconds").style.setProperty("--value", seconds);
+
+        // Stop the countdown if the target date has passed
+        if (difference <= 0) {
+            clearInterval(interval);
+            alert("Countdown has ended!");
+        }
+    };
+
+    // Run the countdown
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>

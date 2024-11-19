@@ -1,0 +1,119 @@
+<div class="flex items-center justify-center min-h-[50vh]">
+    <div class="flex flex-col space-y-8">
+        <!-- Heading -->
+        <div class="mt-16">
+            <div class="text-center space-y-4">
+                <label class="swap swap-flip text-9xl">
+                    <!-- This hidden checkbox controls the state -->
+                    <input type="checkbox" />
+
+                    <!-- When checked (on) -->
+                    <div class="swap-on">🌍</div> <!-- Recycling symbol -->
+
+                    <!-- When unchecked (off) -->
+                    <div class="swap-off">♻️</div> <!-- Trash bin icon -->
+                </label>
+
+                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                    Submit Your E-Waste Collection Request
+                </h1>
+                <strong class="font-extrabold text-blue-700 text-lg block">Quick and Easy Process!</strong>
+
+                <p class="text-xl text-gray-600">
+                    Follow the steps below to log your request for e-waste collection. Our team will handle the rest.
+                </p>
+            </div>
+        </div>
+        <!-- Instructions Accordion -->
+        <div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="instructions" checked="checked" />
+                <div class="collapse-title text-xl font-medium">Step 1: Describe Your E-Waste</div>
+                <div class="collapse-content">
+                    <p>Provide a detailed description of the e-waste items you wish to dispose of, such as electronic gadgets, batteries, or other components.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200 mt-2">
+                <input type="radio" name="instructions" />
+                <div class="collapse-title text-xl font-medium">Step 2: Choose a Pickup Date</div>
+                <div class="collapse-content">
+                    <p>Select a convenient date and time for our team to collect the e-waste from your location.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200 mt-2">
+                <input type="radio" name="instructions" />
+                <div class="collapse-title text-xl font-medium">Step 3: Submit Your Request</div>
+                <div class="collapse-content">
+                    <p>Once you've provided all the details, click the "Log Request" button to confirm your submission.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-center space-x-4">
+            <a href="/log-request-step-one" class="btn btn-primary">Log Request</a>
+            <a href="/help" class="btn btn-accent">Help</a>
+        </div>
+    </div>
+</div>
+
+<div class="flex gap-5 text- justify-center space-x-2 mt-16">
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="days" style="--value:15;"></span>
+      </span>
+        <p>days</p>
+    </div>
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="hours" style="--value:10;"></span>
+      </span>
+        <p>hours</p>
+    </div>
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="minutes" style="--value:24;"></span>
+      </span>
+        <p>min</p>
+    </div>
+    <div>
+      <span class="countdown font-mono text-4xl">
+        <span id="seconds" style="--value:59;"></span>
+      </span>
+        <p>sec</p>
+    </div>
+</div>
+
+<script>
+    // Set the countdown target date
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 3); // Add 15 days
+
+    // Update the countdown every second
+    const updateCountdown = () => {
+        const now = new Date();
+        const difference = targetDate - now;
+
+        // Calculate time components
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Update the DOM
+        document.getElementById("days").style.setProperty("--value", days);
+        document.getElementById("hours").style.setProperty("--value", hours);
+        document.getElementById("minutes").style.setProperty("--value", minutes);
+        document.getElementById("seconds").style.setProperty("--value", seconds);
+
+        // Stop the countdown if the target date has passed
+        if (difference <= 0) {
+            clearInterval(interval);
+            alert("Countdown has ended!");
+        }
+    };
+
+    // Run the countdown
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>

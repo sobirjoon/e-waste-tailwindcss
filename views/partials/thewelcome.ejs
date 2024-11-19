@@ -1,0 +1,71 @@
+<div class="flex items-center justify-center min-h-[50vh]">
+    <div class="flex flex-col space-y-8">
+        <!-- Heading -->
+        <div class="mt-2">
+            <div class="text-center space-y-2">
+                <label class="swap swap-flip text-9xl">
+                    <!-- This hidden checkbox controls the state -->
+                    <input type="checkbox" />
+
+                    <!-- Front Side -->
+                    <div class="swap-off flex items-center space-x-4">
+                        <div>♻️</div>
+                    </div>
+
+                    <!-- Back Side -->
+                    <div class="swap-on flex flex-col items-center">
+                        <div>🌍</div> <!-- Icon3: Energy -->
+                        <p class="text-2xl font-bold text-green-700 mt-4">Protect Our Planet!</p>
+                    </div>
+                </label>
+
+                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                    Submit Your E-Waste Collection Request
+                </h1>
+                <strong class="font-extrabold text-blue-700 text-lg block">Quick and Easy Process!</strong>
+
+                <p class="text-xl text-gray-600">
+                    Follow the steps below to log your request for e-waste collection. Our team will handle the rest.
+                </p>
+            </div>
+        </div>
+        <!-- Instructions Accordion -->
+        <div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="instructions" checked="checked" />
+                <div class="collapse-title text-xl font-medium">Step 1: Describe Your E-Waste</div>
+                <div class="collapse-content">
+                    <p>Provide a detailed description of the e-waste items you wish to dispose of, such as electronic gadgets, batteries, or other components.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200 mt-2">
+                <input type="radio" name="instructions" />
+                <div class="collapse-title text-xl font-medium">Step 2: Choose a Pickup Date</div>
+                <div class="collapse-content">
+                    <p>Select a convenient date and time for our team to collect the e-waste from your location.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200 mt-2">
+                <input type="radio" name="instructions" />
+                <div class="collapse-title text-xl font-medium">Step 3: Submit Your Request</div>
+                <div class="collapse-content">
+                    <p>Once you've provided all the details, click the "Log Request" button to confirm your submission.</p>
+                </div>
+            </div>
+
+            <div class="collapse bg-base-200 mt-2">
+                <input type="radio" name="instructions" />
+                <div class="collapse-title text-xl font-medium">Step 4: Track Your Request</div>
+                <div class="collapse-content">
+                    <p>After submitting your request, use the tracking ID provided to monitor the status of your e-waste collection. Visit the <a href="/track-request" class="text-blue-600 hover:underline">tracking page</a> to view updates and estimated pickup times.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-center space-x-4">
+            <a href="/log-request-step-one" class="btn btn-primary">Log Request</a>
+            <a href="/help" class="btn btn-accent">Help</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="flex items-center justify-center min-h-[50vh]">
+    <div class="card w-full max-w-2xl bg-base-100 shadow-xl p-8 mt-16">
+        <label class="swap swap-flip text-8xl mb-4">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" />
+
+            <div class="swap-on flex flex-col items-center">
+                <div>🌟</div> <!-- Happy Smiley -->
+                <p class="text-2xl font-bold text-green-700 mt-4">Great Choice!</p>
+            </div>
+            <div class="swap-off flex flex-col items-center">🗑️</div>
+        </label>
+
+        <!-- Progress Bar -->
+        <div class="w-full mb-6">
+            <progress class="progress progress-primary w-full" value="80" max="100"></progress>
+        </div>
+
+        <!-- Heading and Subtext -->
+        <h2 class="text-center text-2xl font-bold mb-2">Do you want us to pick it up from your address?</h2>
+        <p class="text-center text-sm text-gray-500 mb-8">Your address is currently set as <strong>XX</strong></p>
+
+        <!-- Buttons -->
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <!-- Button 1 -->
+            <button class="btn btn-outline rounded-full">
+                Yes
+            </button>
+            <!-- Button 2 -->
+            <button class="btn btn-outline rounded-full">
+                Other, please specify
+            </button>
+        </div>
+
+        <!-- Address Input -->
+        <div class="mb-8">
+            <label class="block mb-2 text-sm font-medium text-gray-700">Address Input</label>
+            <textarea
+                    class="textarea textarea-bordered w-full"
+                    placeholder="Enter your address here..."></textarea>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-center items-center space-x-4">
+            <!-- Back Button -->
+            <a href="/log-request-step-three" class="btn">
+                Go Back
+            </a>
+            <!-- Next Button -->
+<!--            <a href="/log-request-step-four" class="btn btn-primary">-->
+<!--                Submit-->
+<!--            </a>-->
+        </div>
+    </div>
+</div>

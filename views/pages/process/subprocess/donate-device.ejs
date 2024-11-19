@@ -1,0 +1,48 @@
+<div class="flex items-center justify-center min-h-[50vh]">
+    <div class="card w-full max-w-3xl bg-base-100 shadow-xl p-8 mt-16">
+        <label class="swap swap-flip text-8xl mb-2">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" />
+
+            <div class="swap-on flex flex-col items-center">
+                <div>👏</div> <!-- Happy Smiley -->
+                <p class="text-2xl font-bold text-green-700 mt-4">Nice Work!</p>
+            </div>
+            <div class="swap-off flex flex-col items-center">🎁</div>
+        </label>
+
+        <!-- Progress Bar -->
+        <div class="w-full mb-6">
+            <progress class="progress progress-primary w-full" value="80" max="100"></progress>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-center text-2xl font-bold mb-6">Here are links to your nearest local charities</h2>
+
+        <!-- Charity Links -->
+        <div class="mb-6 space-y-4">
+            <div class="flex justify-start space-x-2">
+                <span class="text-gray-700 font-medium">Charity 1</span>
+                <a href="#" class="text-blue-500 hover:underline">Link to Charity1</a>
+            </div>
+            <div class="flex justify-start space-x-2">
+                <span class="text-gray-700 font-medium">Charity 2</span>
+                <a href="#" class="text-blue-500 hover:underline">Link to Charity2</a>
+            </div>
+            <div class="flex justify-start space-x-2">
+                <span class="text-gray-700 font-medium">Charity 3</span>
+                <a href="#" class="text-blue-500 hover:underline">Link to Charity3</a>
+            </div>
+        </div>
+
+        <!-- Other Charity Links Button -->
+        <div class="flex justify-center mb-6">
+            <button class="btn btn-outline">Other charity links</button>
+        </div>
+
+        <!-- Go Back Button -->
+        <div class="flex justify-center">
+            <a href="/log-request-step-three" class="btn">Go Back</a>
+        </div>
+    </div>
+</div>

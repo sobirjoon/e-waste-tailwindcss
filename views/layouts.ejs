@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="pastel">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body class="h-dvh">
+
+<div class="flex flex-col h-screen">
+    <header>
+        <%- include('partials/header') %>
+    </header>
+    <main class="flex-grow">
+        <section>
+            <%- body %>
+        </section>
+    </main>
+
+    <footer>
+        <%- include('partials/footer') %>
+    </footer>
+</div>
+
+<script src="/js/theme.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

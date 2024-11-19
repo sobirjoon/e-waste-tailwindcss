@@ -1,0 +1,53 @@
+<div class="flex items-center justify-center min-h-[50vh]">
+    <div class="card w-full max-w-3xl bg-base-100 shadow-xl p-8 mt-16">
+        <label class="swap swap-flip text-8xl mb-4">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" />
+
+            <div class="swap-on flex flex-col items-center">
+                <div>🙌</div> <!-- Happy Smiley -->
+                <p class="text-2xl font-bold text-green-700 mt-4">Let's Go!</p>
+            </div>
+            <div class="swap-off flex flex-col items-center">💸</div>
+        </label>
+
+        <!-- Progress Bar -->
+        <div class="w-full mb-6">
+            <progress class="progress progress-primary w-full" value="80" max="100"></progress>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-center text-2xl font-bold mb-4">Here are some trusted resellers near you</h2>
+
+        <!-- Map Placeholder -->
+        <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-600 text-lg font-medium mb-6">
+            Map of places near your location
+        </div>
+
+        <!-- Instructions Box -->
+        <div class="flex justify-between items-center">
+            <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 w-2/3">
+                <p class="text-sm text-gray-700">
+                    If no trusted reseller is shown near your location, please try again later or contact customer support for verification.
+                </p>
+            </div>
+
+            <!-- Back to Home Button -->
+            <a href="/log-request-step-three" class="btn btn-black">
+                Go Back
+            </a>
+
+            <!-- Navigation Buttons -->
+<!--            <div class="flex justify-center items-center space-x-4">-->
+                <!-- Back Button -->
+<!--                <a href="/log-request-step-two" class="btn">-->
+<!--                    Back-->
+<!--                </a>-->
+                <!-- Next Button -->
+<!--                <a href="/log-request-step-four" class="btn">-->
+<!--                    Next-->
+<!--                </a>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
