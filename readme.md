@@ -1,2 +1,3 @@
-# Use this command to compile changes to public/css/main.css
+E-Waste Application
+
 npx tailwindcss -i ./src/styles.css -o ./public/css/main.css --watch
